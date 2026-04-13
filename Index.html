@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RE:ESG | Coming Soon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Color Palette based on Carbon Profile */
+        :root {
+            --dark-green: #1b3e34;      /* Deep Forest Green */
+            --accent-green: #a3cf62;    /* Vibrant Lime Green */
+            --text-grey: #4a5568;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Background Image with Dark Overlay */
+        .background-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(27, 62, 52, 0.7), rgba(27, 62, 52, 0.85)), 
+                        url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=2560'); /* Forest background */
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+
+        .main-card {
+            background: var(--white);
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            max-width: 550px;
+            width: 90%;
+            text-align: center;
+            border-top: 6px solid var(--accent-green); /* The Carbon Profile accent stripe */
+            animation: slideUp 0.8s ease-out;
+        }
+
+        .logo {
+            max-width: 240px;
+            height: auto;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            color: var(--dark-green);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        p {
+            color: var(--text-grey);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
+        }
+
+        .contact-info {
+            border-top: 1px solid #eee;
+            padding-top: 2rem;
+        }
+
+        .contact-label {
+            display: block;
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .email-link {
+            color: var(--dark-green);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .email-link:hover {
+            color: var(--accent-green);
+        }
+
+        /* Animations */
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 480px) {
+            .main-card { padding: 2rem 1.5rem; }
+            h1 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-overlay"></div>
+
+    <main class="main-card">
+        <img src="logo.png" alt="RE:ESG Logo" class="logo">
+        
+        <h1>Coming Soon</h1>
+        <p>
+            We are redefining Environmental, Social, and Governance excellence. 
+            Our new digital home is currently under construction.
+        </p>
+        
+        <div class="contact-info">
+            <span class="contact-label">Get in touch</span>
+            <a href="mailto:hello@re-esg.co.uk" class="email-link">hello@re-esg.co.uk</a>
+        </div>
+    </main>
+
+</body>
+</html>
